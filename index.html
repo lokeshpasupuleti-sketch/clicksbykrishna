@@ -3,58 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krishna Moorthy Photography</title>
+    <title>Krishna Photography</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <!-- Header Section -->
     <header>
-        <h1>Krishna Moorthy Photography</h1>
-        <p>Capturing moments that last a lifetime</p>
+        <div class="container">
+            <h1>Krishna Photography</h1>
+            <p>Capturing moments, creating memories.</p>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="gallery">
-            <img src="https://raw.githubusercontent.com/lokeshpasupuleti-sketch/clicksbykrishna/refs/heads/main/sample1.jpg" alt="Sample Photo 1">
-            <img src="https://github.com/lokeshpasupuleti-sketch/clicksbykrishna/blob/main/sample2.jpg" alt="Sample Photo 2">
-            <img src="images/sample3.jpg" alt="Sample Photo 3">
+    <!-- Image Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Our Work</h2>
+            <div class="gallery-grid">
+                <img src="https://raw.githubusercontent.com/lokeshpasupuleti-sketch/clicksbykrishna/refs/heads/main/sample1.jpg" alt="Sample Photo 1">
+                <img src="https://raw.githubusercontent.com/krishnamoorthy/krishna-photography/main/images/sample2.jpg" alt="Sample Photo 2">
+                <img src="https://raw.githubusercontent.com/krishnamoorthy/krishna-photography/main/images/sample3.jpg" alt="Sample Photo 3">
+                <img src="https://raw.githubusercontent.com/krishnamoorthy/krishna-photography/main/images/sample4.jpg" alt="Sample Photo 4">
+            </div>
         </div>
     </section>
 
-    <section id="about">
-        <h2>About Krishna Moorthy</h2>
-        <p>With a passion for photography, Krishna Moorthy has been capturing stunning images for over 30 years, specializing in events, portraits, and landscapes.</p>
-    </section>
+    <!-- Booking Section -->
+    <section id="booking">
+        <div class="container">
+            <h2>Book Your Session</h2>
+            <form id="bookingForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-    <section id="contact">
-        <h2>Contact & Booking</h2>
-        <p>Phone: <a href="tel:9393621444">9393621444</a></p>
-        <p>Email: <a href="mailto:pasupuletilokesh1998@gmail.com">pasupuletilokesh1998@gmail.com</a></p>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-        <h3>Book a Session</h3>
-        <form id="bookingForm">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="date" name="date" required>
-            <textarea name="message" placeholder="Any Special Requests"></textarea>
-            <button type="submit">Book Now</button>
-        </form>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Krishna Moorthy Photography. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Krishna Photography. All rights reserved.</p>
+            <p>Contact: <a href="tel:+919393621444">+91 9393621444</a> | Email: <a href="mailto:pasupuletilokesh1998@gmail.com">pasupuletilokesh1998@gmail.com</a></p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
