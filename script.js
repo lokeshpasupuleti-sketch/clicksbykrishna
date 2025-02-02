@@ -1,16 +1,16 @@
-let slideIndex = 0;
+document.querySelectorAll('.gallery-img').forEach(item => {
+    item.addEventListener('click', (event) => {
+        const fullSizeUrl = item.getAttribute('data-full');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        
+        lightboxImage.src = fullSizeUrl;
+        lightbox.style.display = 'flex';
+    });
+});
 
-function showSlides() {
-    let slides = document.querySelectorAll(".carousel-images img");
-    if (slideIndex >= slides.length) { slideIndex = 0; }
-    if (slideIndex < 0) { slideIndex = slides.length - 1; }
-    document.querySelector(".carousel-images").style.transform = `translateX(-${slideIndex * 100}%)`;
-}
-
-function moveSlide(n) {
-    slideIndex += n;
-    showSlides();
-}
-
-showSlides(); // Initial call to show the first image
-setInterval(() => { moveSlide(1); }, 3000); // Automatically move to the next slide every 3 seconds
+// Close Lightbox
+document.getElementById('close').addEventListener('click', () => {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+});
