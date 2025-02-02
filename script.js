@@ -1,18 +1,16 @@
-document.getElementById("bookingForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+let slideIndex = 0;
 
-    let formData = new FormData(this);
+function showSlides() {
+    let slides = document.querySelectorAll(".carousel-images img");
+    if (slideIndex >= slides.length) { slideIndex = 0; }
+    if (slideIndex < 0) { slideIndex = slides.length - 1; }
+    document.querySelector(".carousel-images").style.transform = `translateX(-${slideIndex * 100}%)`;
+}
 
-    fetch("https://formspree.io/f/your-form-id", {
-        method: "POST",
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-    }).then(response => {
-        if (response.ok) {
-            alert("Booking request sent successfully!");
-            this.reset();
-        } else {
-            alert("Something went wrong. Please try again.");
-        }
-    }).catch(error => alert("Error: " + error));
-});
+function moveSlide(n) {
+    slideIndex += n;
+    showSlides();
+}
+
+showSlides(); // Initial call to show the first image
+setInterval(() => { moveSlide(1); }, 3000); // Automatically move to the next slide every 3 seconds
