@@ -15,6 +15,7 @@
                 <ul>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#booking">Booking</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -26,7 +27,29 @@
         <div class="container">
             <h2>Capture Your Most Cherished Moments</h2>
             <p>Professional Photography Services for Weddings, Birthdays & More</p>
-            <a href="#contact" class="cta-btn">Book Now</a>
+            <a href="#booking" class="cta-btn">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking">
+        <div class="container">
+            <h2>Book a Session</h2>
+            <form action="https://formsubmit.co/pasupuletilokesh1998@gmail.com" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit" class="cta-btn">Submit</button>
+            </form>
         </div>
     </section>
 
@@ -35,46 +58,9 @@
         <div class="container">
             <h2>Photo Gallery</h2>
             <div class="image-grid">
-                <img src="20210618200143_IMG_9499.JPG" alt="Gallery Image 1" class="gallery-img">
+                <img src="image1.jpg" alt="Gallery Image 1" class="gallery-img">
                 <img src="image2.jpg" alt="Gallery Image 2" class="gallery-img">
                 <img src="image3.jpg" alt="Gallery Image 3" class="gallery-img">
-            </div>
-        </div>
-    </section>
-
-    <!-- Image Popup Modal -->
-    <div id="image-popup">
-        <span id="close-popup">&times;</span>
-        <div id="popup-content">
-            <img id="popup-img" src="" alt="Popup Image">
-        </div>
-    </div>
-
-    <!-- Services Section (Vertical Layout) -->
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-box">
-                    <img src="wedding.jpg" alt="Wedding Photography">
-                    <h3>Wedding Photography</h3>
-                    <p>We capture your special day with elegance and style.</p>
-                </div>
-                <div class="service-box">
-                    <img src="birthday.jpg" alt="Birthday Shoots">
-                    <h3>Birthday Shoots</h3>
-                    <p>Make your birthdays memorable with our creative photography.</p>
-                </div>
-                <div class="service-box">
-                    <img src="corporate.jpg" alt="Corporate Events">
-                    <h3>Corporate Events</h3>
-                    <p>Professional photography for business events and meetings.</p>
-                </div>
-                <div class="service-box">
-                    <img src="portfolio.jpg" alt="Portfolio Shoots">
-                    <h3>Portfolio Shoots</h3>
-                    <p>Get stunning portraits for your personal or professional needs.</p>
-                </div>
             </div>
         </div>
     </section>
@@ -94,89 +80,50 @@
         </div>
     </footer>
 
-    <script>
-        // Lightbox for Image Popup
-        document.addEventListener("DOMContentLoaded", function () {
-            const images = document.querySelectorAll(".gallery-img");
-            const popup = document.getElementById("image-popup");
-            const popupImg = document.getElementById("popup-img");
-            const closePopup = document.getElementById("close-popup");
-
-            images.forEach(image => {
-                image.addEventListener("click", function () {
-                    popup.style.display = "flex";
-                    popupImg.src = this.src;
-                });
-            });
-
-            closePopup.addEventListener("click", function () {
-                popup.style.display = "none";
-            });
-
-            popup.addEventListener("click", function (e) {
-                if (e.target !== popupImg) {
-                    popup.style.display = "none";
-                }
-            });
-        });
-    </script>
-
     <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f5f5f5;
+        /* Booking Section */
+        #booking {
+            padding: 50px 0;
+            background: #f8f9fa;
+            text-align: center;
         }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
+        #booking form {
+            max-width: 500px;
             margin: auto;
-            text-align: center;
-        }
-
-        /* Gallery */
-        .image-grid {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .gallery-img {
-            width: 25%;
-            max-width: 300px;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        /* Image Popup Modal */
-        #image-popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.8);
-            padding: 15px;
+            background: white;
+            padding: 20px;
             border-radius: 10px;
-            text-align: center;
-            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        #popup-content {
-            max-width: 90%;
-            max-height: 80vh;
-            overflow: hidden;
+        #booking label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
         }
 
-        #popup-img {
-            max-width: 100%;
-            max-height: 80vh;
-            border-radius: 8px;
+        #booking input, #booking textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #booking .cta-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        #booking .cta-btn:hover {
+            background: #0056b3;
         }
     </style>
 </body>
