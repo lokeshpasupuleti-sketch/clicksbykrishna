@@ -1,3 +1,4 @@
+// Open Lightbox
 document.querySelectorAll('.gallery-img').forEach(item => {
     item.addEventListener('click', (event) => {
         const fullSizeUrl = item.getAttribute('data-full');
