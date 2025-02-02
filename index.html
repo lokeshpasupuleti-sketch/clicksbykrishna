@@ -11,120 +11,63 @@
     <header>
         <div class="container">
             <h1>Krishna Photography</h1>
-            <nav>
-                <ul>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#booking">Booking</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            <p>Capturing moments, creating memories.</p>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <h2>Capture Your Most Cherished Moments</h2>
-            <p>Professional Photography Services for Weddings, Birthdays & More</p>
-            <a href="#booking" class="cta-btn">Book Now</a>
-        </div>
-    </section>
-
-    <!-- Booking Section -->
-    <section id="booking">
-        <div class="container">
-            <h2>Book a Session</h2>
-            <form action="https://formsubmit.co/pasupuletilokesh1998@gmail.com" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="date">Preferred Date:</label>
-                <input type="date" id="date" name="date" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit" class="cta-btn">Submit</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
+    <!-- Image Gallery Section -->
     <section id="gallery">
         <div class="container">
-            <h2>Photo Gallery</h2>
+            <h2>Our Work</h2>
             <div class="image-grid">
-                <img src="image1.jpg" alt="Gallery Image 1" class="gallery-img">
-                <img src="image2.jpg" alt="Gallery Image 2" class="gallery-img">
-                <img src="image3.jpg" alt="Gallery Image 3" class="gallery-img">
+                <img src="20210618200143_IMG_9499.JPG" alt="Sample Photo 1" class="gallery-img" data-full="20210618200143_IMG_9499.JPG">
+                <img src="20210618200143_IMG_9499.JPG" alt="Sample Photo 2" class="gallery-img" data-full="20210618200143_IMG_9499.JPG">
+                <img src="20210618200143_IMG_9499.JPG" alt="Sample Photo 3" class="gallery-img" data-full="https://raw.githubusercontent.com/krishnamoorthy/krishna-photography/main/images/sample3.jpg">
+                <img src="20210618200143_IMG_9499.JPG" alt="Sample Photo 4" class="gallery-img" data-full="https://raw.githubusercontent.com/krishnamoorthy/krishna-photography/main/images/sample4.jpg">
             </div>
         </div>
     </section>
 
-    <!-- WhatsApp Icon -->
-    <div class="whatsapp-icon">
-        <a href="https://wa.me/919393621444" target="_blank">
-            <img src="whatsapp-icon.png" alt="WhatsApp">
-        </a>
+    <!-- Lightbox Modal for Image View -->
+    <div id="lightbox" class="lightbox">
+        <span id="close" class="close-btn">&times;</span>
+        <img id="lightbox-image" src="" alt="Full Size Image">
     </div>
 
-    <!-- Footer -->
+    <!-- Booking Section -->
+    <section id="booking">
+        <div class="container">
+            <h2>Book Your Session</h2>
+            <form id="bookingForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Krishna Photography</p>
+            <p>&copy; 2025 Krishna Photography. All rights reserved.</p>
             <p>Contact: <a href="tel:+919393621444">+91 9393621444</a> | Email: <a href="mailto:pasupuletilokesh1998@gmail.com">pasupuletilokesh1998@gmail.com</a></p>
         </div>
     </footer>
 
-    <style>
-        /* Booking Section */
-        #booking {
-            padding: 50px 0;
-            background: #f8f9fa;
-            text-align: center;
-        }
+    <!-- WhatsApp Icon at Bottom -->
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/919393621444" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50" height="50">
+        </a>
+    </div>
 
-        #booking form {
-            max-width: 500px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #booking label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-
-        #booking input, #booking textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        #booking .cta-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-transform: uppercase;
-        }
-
-        #booking .cta-btn:hover {
-            background: #0056b3;
-        }
-    </style>
+    <script src="script.js"></script>
 </body>
 </html>
