@@ -1,24 +1,17 @@
-// Lightbox for Image Popup
-document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".gallery-img");
-    const popup = document.getElementById("image-popup");
-    const popupImg = document.getElementById("popup-img");
-    const closePopup = document.getElementById("close-popup");
-
-    images.forEach(image => {
-        image.addEventListener("click", function () {
-            popup.style.display = "block";
-            popupImg.src = this.src;
-        });
+// Open Lightbox
+document.querySelectorAll('.gallery-img').forEach(item => {
+    item.addEventListener('click', (event) => {
+        const fullSizeUrl = item.getAttribute('data-full');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        
+        lightboxImage.src = fullSizeUrl;
+        lightbox.style.display = 'flex';
     });
+});
 
-    closePopup.addEventListener("click", function () {
-        popup.style.display = "none";
-    });
-
-    popup.addEventListener("click", function (e) {
-        if (e.target !== popupImg) {
-            popup.style.display = "none";
-        }
-    });
+// Close Lightbox
+document.getElementById('close').addEventListener('click', () => {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
 });
